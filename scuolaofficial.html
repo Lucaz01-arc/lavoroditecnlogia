@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Indagine di Mercato - Garage</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+        }
+
+        header, footer {
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: linear-gradient(to right, #34495e, #5d6d7e);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+            background-color: #ecf0f1;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: none;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #34495e;
+        }
+
+        .toggle-btn {
+            margin: 10px 0;
+            padding: 8px 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .toggle-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Compito di realtà: "Confronta i prezzi"</h1>
+        <p>Indagine di Mercato: Garage</p>
+    </header>
+
+    <nav>
+        <a href="#introduzione">Introduzione</a>
+        <a href="#aziende">Aziende</a>
+        <a href="#confronto">Confronto</a>
+        <a href="#analisi">Analisi</a>
+        <a href="#scelta">Scelta Finale</a>
+    </nav>
+
+    <main>
+
+        <section id="introduzione">
+            <h2>Introduzione</h2>
+            <p>In questo progetto abbiamo simulato l’acquisto di un garage, svolgendo un’indagine di mercato per confrontare tre diverse proposte nel centro di Pontecagnano Faiano. L’obiettivo era individuare la soluzione più conveniente analizzando prezzo, dimensioni, posizione e caratteristiche.
+
+Dopo aver raccolto i dati da diverse agenzie immobiliari, abbiamo  realizzato una tabella comparativa e un grafico per visualizzare meglio le differenze tra i garage. Infine, abbiamo argomentato la  scelta finale spiegando perché uno dei tre risulta essere il più vantaggioso.
+
+Questo lavoro  ha aiutato a capire come analizzare offerte reali e prendere decisioni in modo consapevole.</p>
+        </section>
+
+        <section id="aziende">
+            <h2>Aziende Trovate</h2>
+            <p>Nel corso della nostra ricerca, svolta attraverso il sito immobiliare.it, abbiamo individuato due aziende immobiliari attive nella zona di Pontecagnano Faiano. In particolare, abbiamo trovato due garage proposti da “Centro Aste Salerno” e un garage offerto da “Grimaldi Immobiliare”. Queste agenzie ci hanno fornito offerte reali e dettagliate, utili per confrontare le caratteristiche e valutare quale immobile sia il più conveniente.</p>
+            <img src="centroaste.jpg" alt="Prova immagine azienda" />
+            <img src="grimaldi.jpg" alt="Prova immagine azienda" />
+        </section>
+
+        <section id="confronto">
+    <h2>Tabella di Confronto Garage</h2>
+    <button class="toggle-btn" onclick="toggleTable()">Mostra/Nascondi Tabella</button>
+    <div id="tableContainer">
+        <table>
+            <colgroup>
+                <col style="width: 20%;">
+                <col style="width: 15%;">
+                <col style="width: 10%;">
+                <col style="width: 10%;">
+                <col style="width: 20%;">
+                <col style="width: 25%;">
+            </colgroup>
+            <tr>
+                <th>Modello</th>
+                <th>Azienda</th>
+                <th>Prezzo</th>
+                <th>Dimensioni</th>
+                <th>Indirizzo</th>
+                <th>Note</th>
+            </tr>
+            <tr>
+                <td>Garage - Box | Intera proprietà | Classe immobile media</td>
+                <td>Centro Aste Salerno</td>
+                <td>€ 18.900,00</td>
+                <td>28 m²</td>
+                <td>corso Italia 45, Pontecagnano Faiano</td>
+                <td>Anno di costruzione: 1980 | Stato: Buono , abitabile | Riscaldamento: Autonomo, a radiatori, alimentato a metano  | Posizione : Centro Città </td>
+            </tr>
+        </table>
+
+        <table>
+            <colgroup>
+                <col style="width: 20%;">
+                <col style="width: 15%;">
+                <col style="width: 10%;">
+                <col style="width: 10%;">
+                <col style="width: 20%;">
+                <col style="width: 25%;">
+            </colgroup>
+            <tr>
+                <th>Modello</th>
+                <th>Azienda</th>
+                <th>Prezzo</th>
+                <th>Dimensioni</th>
+                <th>Indirizzo</th>
+                <th>Note</th>
+            </tr>
+            <tr>
+                <td>Box Auto - Garage</td>
+                <td>Centro Aste Salerno</td>
+                <td>€ 20.587,00</td>
+                <td>31 m²</td>
+                <td>corso Italia 45, Pontecagnano Faiano</td>
+                <td>Anno di costruzione: 1980 | Stato: Buono , abitabile | Riscaldamento: Autonomo, a radiatori, alimentato a metano  | Posizione : Centro Città</td>
+            </tr>
+        </table>
+
+        <table>
+            <colgroup>
+                <col style="width: 20%;">
+                <col style="width: 15%;">
+                <col style="width: 10%;">
+                <col style="width: 10%;">
+                <col style="width: 20%;">
+                <col style="width: 25%;">
+            </colgroup>
+            <tr>
+                <th>Modello</th>
+                <th>Azienda</th>
+                <th>Prezzo</th>
+                <th>Dimensioni</th>
+                <th>Indirizzo</th>
+                <th>Note</th>
+            </tr>
+            <tr>
+                <td>Box Auto - Garage</td>
+                <td>Grimaldi Immobiliare</td>
+                <td>€ 25.000</td>
+                <td>24 m²</td>
+                <td>Via San Francesco, 22</td>
+                <td>Capienza : 1 auto 1 moto | Tipologia : Garage - Box - Box indipendente | Piano: Seminterrato | In zona centralissima a Pontecagnano, nel cuore pulsante della città, vendiamo un box auto di circa 24 mq, situato al piano interrato di un contesto sicuro e ben accessibile. Ideale come investimento o per uso personale.</td>
+            </tr>
+        </table>
+
+        <img src="xxl.jpg" alt="Prova immagine garage" />
+        <img src="immaginigarage1.jpg" alt="Prova immagine garage" />
+    </div>
+</section>
+
+
+        <section id="analisi">
+            <h2>Grafico e Analisi dei Dati</h2>
+            <p>Nel grafico possiamo notare le differenti aziende e i loro rispettivi prezzi di mercato.</p>
+            <img src="omg.png" alt="Prova immagine garage" /></p>
+        </section>
+
+        <section id="scelta">
+            <h2>Scelta e Argomentazione</h2>
+            <p>Dopo aver confrontato i tre garage individuati, abbiamo scelto di acquistare il Box Auto - Garage proposto da Centro Aste Salerno al prezzo di € 20.587,00.
+
+La nostra scelta è ricaduta su questo immobile per diversi motivi. Prima di tutto, presenta il miglior rapporto qualità/prezzo, offrendo una superficie ampia di 31 m² a un costo intermedio rispetto agli altri due garage. Inoltre, si trova in una posizione centrale (corso Italia, Pontecagnano Faiano), comoda e ben servita.
+
+Anche le condizioni dell'immobile sono buone: è abitabile, dotato di riscaldamento autonomo a metano, e situato in un contesto urbano facilmente accessibile. Rispetto agli altri garage analizzati, questo rappresenta un giusto equilibrio tra prezzo, spazio e posizione, rendendolo la scelta più vantaggiosa secondo i criteri individuati.</p>
+        </section>
+        
+        <section id="codice">
+    <h2>Il mio codice</h2>
+    <p>
+        Per realizzare questo sito ho usato HTML, CSS e JavaScript. Ho creato una struttura divisa in sezioni, aggiunto una palette con sfumature, e alcune funzioni interattive come lo scroll fluido e la possibilità di mostrare/nascondere contenuti.
+    </p>
+    <p>
+        Qui sotto è possibile visualizzare il codice completo che ho scritto.
+    </p>
+    
+    <button class="toggle-btn" onclick="toggleCodice()">Mostra/Nascondi Codice</button>
+
+    <div id="codiceContainer" style="display: none; margin-top: 15px;">
+        <pre style="background-color: #f4f4f4; padding: 15px; overflow-x: auto; border: 1px solid #ccc; border-radius: 8px;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="it"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Indagine di Mercato - Garage&lt;/title&gt;
+    &lt;style&gt;
+        /* CSS per sfumature, layout e stile moderno */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;header&gt;...&lt;/header&gt;
+
+    &lt;nav&gt;
+        &lt;a href="#introduzione"&gt;Introduzione&lt;/a&gt;
+        &lt;a href="#aziende"&gt;Aziende&lt;/a&gt;
+        &lt;a href="#confronto"&gt;Confronto&lt;/a&gt;
+        &lt;a href="#analisi"&gt;Analisi&lt;/a&gt;
+        &lt;a href="#scelta"&gt;Scelta Finale&lt;/a&gt;
+    &lt;/nav&gt;
+
+    &lt;main&gt;
+        &lt;section id="introduzione"&gt;...&lt;/section&gt;
+        &lt;section id="aziende"&gt;...&lt;/section&gt;
+
+        &lt;section id="confronto"&gt;
+            &lt;button onclick="toggleTable()"&gt;Mostra/Nascondi Tabella&lt;/button&gt;
+            &lt;div id="tableContainer"&gt;
+                &lt;table&gt;
+                    &lt;tr&gt;&lt;th&gt;Modello&lt;/th&gt;&lt;th&gt;Prezzo&lt;/th&gt;&lt;/tr&gt;
+                    &lt;tr&gt;&lt;td&gt;Prova&lt;/td&gt;&lt;td&gt;Prova&lt;/td&gt;&lt;/tr&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section id="analisi"&gt;...&lt;/section&gt;
+        &lt;section id="scelta"&gt;...&lt;/section&gt;
+
+        &lt;section id="codice"&gt;
+            &lt;p&gt;Il mio codice HTML semplificato:&lt;/p&gt;
+            &lt;button onclick="toggleCodice()"&gt;Mostra/Nascondi&lt;/button&gt;
+            &lt;div id="codiceContainer"&gt;
+                &lt;pre&gt;
+                    &lt;!-- Qui vedi la struttura base del sito --&gt;
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;head&gt;...&lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;header&gt;...&lt;/header&gt;
+                        &lt;nav&gt;...&lt;/nav&gt;
+                        &lt;main&gt;
+                            &lt;section&gt;...&lt;/section&gt;
+                        &lt;/main&gt;
+                        &lt;footer&gt;...&lt;/footer&gt;
+                        &lt;script&gt;
+                            // JS per scroll, mostra/nascondi
+                        &lt;/script&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                &lt;/pre&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+    &lt;/main&gt;
+
+    &lt;footer&gt;...&lt;/footer&gt;
+
+    &lt;script&gt;
+        // toggleTable(), scrollToTop(), toggleCodice()
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </div>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p>Realizzato da: Luca Berlen, Cosimo Erra, Cientanni Donato - Classe 3ªE </p>
+        <p>© Luca Berlen</p>
+    </footer>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑ Torna su</button>
+
+    <script>
+        // Bottone torna su
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Mostra/Nascondi tabella
+        function toggleTable() {
+            const container = document.getElementById("tableContainer");
+            container.style.display = container.style.display === "none" ? "block" : "none";
+        }
+
+        // Nascondi tabella all'inizio
+        window.onload = () => {
+            document.getElementById("tableContainer").style.display = "none";
+        };
+
+        function toggleCodice() {
+    const codiceBox = document.getElementById("codiceContainer");
+    codiceBox.style.display = codiceBox.style.display === "none" ? "block" : "none";
+}
+    </script>
+
+</body>
+</html>
+
